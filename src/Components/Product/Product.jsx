@@ -12,7 +12,7 @@ const Product = () => {
         <div className="p-circle"></div>
         
       </div>
-        <img src={first} alt="" className='p-img'/>
+        <img src={first} alt="" className='p-img'/> 
         
      
     </div>
