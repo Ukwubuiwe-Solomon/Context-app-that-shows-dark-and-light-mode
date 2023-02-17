@@ -1,35 +1,26 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import React from 'react'
-import Header from "./Components/Header";
-import ForgotPassword from "./Pages/ForgotPassword";
-import Home from './Pages/Home';
-import Offers from "./Pages/Offers";
-import Profile from "./Pages/Profile";
-import SignIn from "./Pages/SignIn";
-import SignUp from "./Pages/SignUp";
 
-
-
-
-
+import React, { useContext } from "react";
+import  About  from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
+import  Intro  from "./Components/Intro/Intro";
+import  ProductList  from "./Components/ProductList/productList";
+import Toggle from "./Components/Toggle/Toggle";
+import { ThemeContext } from "./Context";
 function App() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
    
-    
+  <div style={{backgroundColor:darkMode ? "#222": "white", color:darkMode && "white"}}>
+  <Toggle />
+    <Intro />
+    <About />
+    <ProductList />
+    <Contact />
+
+  </div>
    
-    
-    <Router>
-       
-      <Header />  
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/offers" element={<Offers />} />
-      </Routes>
-  </Router>
+   
       
     
       
