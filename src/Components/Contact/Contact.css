@@ -19,11 +19,11 @@ position: absolute;
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 .c-info {
-    width: 30px;
+    /* width: 30px; */
     
 }
 .c-title {

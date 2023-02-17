@@ -1,12 +1,12 @@
 .t-button {
     width: 25px;
-    height: 25px;
+    height: 23px;
     border-radius: 40%;
     background-color: #999;
     position: absolute;
     cursor: pointer;
     right: 0;
-
+    transition: 0.3s;
 }
 .t {
     width: 50px;
